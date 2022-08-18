@@ -1,0 +1,32 @@
+body{
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(https://cdn.wallpapersafari.com/97/36/kEDv3x.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+   background-size:100%;
+}
+#main{
+border-radius: 8px;
+border-width: 2px;
+border-style:solid;
+border-color: black;
+background-color: rgb(254, 254, 254);
+padding:20px;
+opacity:0.9;
+width: 100%;
+max-width: 420px;
+margin: 1em;
+}
+#search{
+    display: flex;
+    justify-content: center;
+}
+h1,h2{
+    text-align: center;
+}
+#abc{
+    display: flex;
+    align-items: center;
+}
