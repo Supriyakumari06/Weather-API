@@ -14,10 +14,10 @@ const{temp,humidity}=data.main;
 const{speed}=data.wind;
 console.log(name,icon,description,temp,humidity,speed);
 document.querySelector(".city").innerText="Weather in "+name;
-document.querySelector(".temp").innerText="Temp: "+temp;
+document.querySelector(".temp").innerText="Temp: "+((temp-32)*5/9-100).toFixed(2)+"°C";
 document.querySelector(".description").innerText=description.charAt(0).toUpperCase() + description.slice(1);;
-document.querySelector(".humidity").innerText="Humidity: "+humidity;
-document.querySelector(".wind").innerText="Wind Speed: "+speed;
+document.querySelector(".humidity").innerText="Humidity: "+humidity+"%";
+document.querySelector(".wind").innerText="Wind Speed: "+speed+"m/s";
 document.querySelector(".icon").src="http://openweathermap.org/img/wn/"+icon+".png";
 },
 search: function(){
