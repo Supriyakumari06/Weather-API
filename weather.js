@@ -2,7 +2,7 @@ let weather={
     "api key":"13b014da81278fa3701e258643b55589",
     fetchWeather: function(city){
         fetch(
-            "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+this["api key"],
+            "https://api.openweathermap.org/data/2.5/weather?q="+city+"&appid="+this["api key"]+"&units=metric",
         ).then((response)=> response.json())
         .then((data)=>this.display(data))
         .catch((error)=>alert(`${city} is not a city name.`))
@@ -14,7 +14,7 @@ const{temp,humidity}=data.main;
 const{speed}=data.wind;
 console.log(name,icon,description,temp,humidity,speed);
 document.querySelector(".city").innerText="Weather in "+name;
-document.querySelector(".temp").innerText="Temp: "+((temp-32)*5/9-100).toFixed(2)+"°C";
+document.querySelector(".temp").innerText="Temp: "+temp+"°C";
 document.querySelector(".description").innerText=description.charAt(0).toUpperCase() + description.slice(1);;
 document.querySelector(".humidity").innerText="Humidity: "+humidity+"%";
 document.querySelector(".wind").innerText="Wind Speed: "+speed+"m/s";
